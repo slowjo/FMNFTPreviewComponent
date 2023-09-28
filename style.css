@@ -1,0 +1,154 @@
+@font-face {
+    font-family: Outfit;
+    src: url('./fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+html {
+    font-family: Outfit, sans-serif;
+    color: hsl(215, 51%, 70%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+    background-color: hsl(217, 54%, 11%);
+}
+
+main {
+    max-width: 350px;
+    padding: 24px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+}
+
+a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+a:hover,
+.cyan {
+    color: hsl(178, 100%, 50%);
+}
+
+svg,
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.image-container {
+    display: block;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.image-container:hover::before  {
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+p {
+    font-weight: 300;
+}
+
+h1 + p {
+    line-height: 26px;
+}
+
+.details,
+.price,
+.timelimit,
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.details {
+    justify-content: space-between;
+    padding-block: 15px;
+}
+
+.details img {
+    margin-right: 8px;
+}
+
+.price p {
+    font-weight: 400;
+}
+
+.author img {
+    margin-right: 16px;
+}
+
+.author {
+    padding-top: 16px;
+}
+
+hr {
+    color: hsl(215, 32%, 27%);
+    border: none;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.avatar {
+    width: 33px;
+    height: 33px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+    width: 100%;
+}
+
+@media (min-width: 700px) {
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    h1 + p {
+        font-size: 18px;
+    }
+
+    .details {
+        padding-block: 24px;
+    }
+
+    .author {
+        padding-bottom: 8px;
+    }
+}
