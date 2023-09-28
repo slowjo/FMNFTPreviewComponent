@@ -36,6 +36,7 @@ a {
 }
 
 a:hover,
+a:focus,
 .cyan {
     color: hsl(178, 100%, 50%);
 }
@@ -52,7 +53,8 @@ img {
     position: relative;
 }
 
-.image-container:hover::before  {
+.image-container:hover::before,
+.image-container:focus::before  {
     content: url(./images/icon-view.svg);
     position: absolute;
     top: 0;
